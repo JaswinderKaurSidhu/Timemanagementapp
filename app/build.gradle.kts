@@ -51,6 +51,7 @@ dependencies {
     // Optional: For LiveData or ViewModel support in Compose
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.4")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.4")
+    implementation(libs.androidx.compose.foundation)
 
     // For testing (keep if already there)
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.7.0")

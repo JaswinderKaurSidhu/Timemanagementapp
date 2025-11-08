@@ -16,28 +16,20 @@ fun AppNav() {
         navController = navController,
         startDestination = "welcome"
     ) {
-
-        // ✅ Welcome Screen
         composable("welcome") {
-            Welcome(onGetStarted = {
-                navController.navigate("login")
-            })
+            Welcome(
+                onGetStarted = { navController.navigate("login") }
+            )
         }
 
-        // ✅ Login Screen
         composable("login") {
             LoginScreen(
-                onLoginSuccess = { navController.navigate("dashboard") },
-                onBackToWelcome = { navController.popBackStack() }
+                onLoginSuccess = { navController.navigate("dashboard") }
             )
         }
 
-        // ✅ Dashboard Screen (NEW)
         composable("dashboard") {
-            DashboardScreen(
-                onNavigateToAdd = { /* add later */ },
-                onNavigateToSettings = { /* settings later */ }
-            )
+            DashboardScreen()
         }
     }
 }
